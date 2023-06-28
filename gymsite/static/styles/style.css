@@ -88,8 +88,9 @@ input:focus{
 }
 
 .logo_imagem{
-    width: 150px;
-    height: 120px;
+    width: 200px;
+    height: 160px;
+    margin-top: 10px;
 }
 
 .cabecalho {
