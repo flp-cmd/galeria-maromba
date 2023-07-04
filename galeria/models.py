@@ -9,6 +9,7 @@ class Exercicios(models.Model):
         ('BICEPS', 'Biceps'),
         ('TRICEPS', 'Triceps'),
         ('PERNAS', 'Pernas'),
+        ('OMBROS', 'Ombros'),
         
     ]
     

@@ -1,7 +1,6 @@
 {% extends 'galeria/base.html' %}
 {% load static %}
 {% block content %}
-            <section class="conteudo">
                 <section class="imagem">
                     <div class="imagem__conteudo">
                         {% if fotografia.foto == '' or fotografia.foto == null %}
@@ -19,7 +18,6 @@
                         </div>
                     </div>
                 </section>
-            </section>
         </main>
     </div>
 {% endblock %}
