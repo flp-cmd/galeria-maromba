@@ -32,10 +32,12 @@ body {
     line-height: 1;
     font-family: 'Space Grotesk', sans-serif;
     min-height: 100vh;
-    background: linear-gradient(#041833,#04244F,#154580);
-    background-repeat: no-repeat;
+    background: rgb(2,0,36);
+    background: linear-gradient(166deg, rgba(2,0,36,1) 0%, rgba(9,115,121,1) 26%, rgba(96,22,112,1) 59%, rgba(154,0,255,1) 100%); 
+    background-repeat: repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
 }
 ol, ul {
     list-style: none;
@@ -58,6 +60,14 @@ a {
     color: #D9D9D9;
 }
 
+input::placeholder{
+    color: black;
+}
+
+input:focus{
+    outline: none;
+}
+
 .banner {
     width: auto;
     position: relative;
@@ -65,7 +75,8 @@ a {
 }
 
 .banner__imagem {
-    width: 100%;
+    width: 1440px;
+    height: 350px;
 }
 
 .banner__titulo {
@@ -78,11 +89,21 @@ a {
     left: 80px;
 }
 
+/* .logo_imagem{
+    width: 200px;
+    height: 160px;
+    margin-top: 10px;
+} */
+
 .cabecalho {
     align-items: center;
     display: flex;
     justify-content: space-between;
     margin: 1.5rem 0 4rem 0;
+    height: 200px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .cabecalho__busca {
@@ -102,17 +123,22 @@ a {
     border-radius: 8px;
     display: flex;
     margin: 0 auto;
-    width: 100%;
+    width: 20%;
+    padding: 10px;
 }
 
 .busca__input {
     align-items: center;
     background-color: transparent;
     border: none;
+    color: white;
     font-size: 1rem;
     height: 24px;
-    padding: 10px;
     width: 500px;
+}
+
+.botao__busca{
+    padding-top: 5px;
 }
 
 .busca__icone {
@@ -135,36 +161,41 @@ a {
 .cards__lista{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-content: space-between;
 }
 
-.card {
+.card2 {
     border-radius: 10px;
     box-shadow: 0px 10px 10px #00000050;
     color: #FFFFFF;
     margin-bottom: 1.5rem;
     position: relative;
-    width: 450px;
+    width: 300px;
+    margin-right: 180px;
+    margin-bottom: 40px;
 }
 
 .card__imagem {
-    width: 450px;
+    width: 300px;
+    height: 250px;
     border-radius: 10px 10px 0 0;
 }
 
 .card__tag {
-    background-color: #D9D9D940;
+    background-color: grey;
     border-radius: 8px;
     border: 2px solid transparent;
     font-size: 1.2rem;
-    left: 310px;
+    left: 190px;
     margin-right: 1.5rem;
     padding: .5rem .5rem;
     position: absolute;
     text-align: center;
-    top: 20px;
+    top: 15px;
     width: 100px;
+    color: white;
+    box-sizing: border-box;
 }
 
 .card__info {
@@ -200,20 +231,22 @@ a {
 
 .imagem {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    /* align-items: center; */
 }
 
 .imagem__conteudo {
     background-color: transparent;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     border-radius: 20px 20px 0 0;
     width: 950px;
 }
 
 .imagem__imagem {
-    width: 100%;
+    width: 950px;
+    height: 534px;
     border-radius: 20px;
 }
 
@@ -222,8 +255,8 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin-bottom: 50px;
+    margin-top: 20px;
 }
 
 .imagem__texto {
@@ -232,12 +265,15 @@ a {
     justify-content: space-between;
     color: #FFFFFF;
     margin-top: 0.5rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .imagem__titulo {
     font-weight: bold;
     line-height: 2rem;
     color: #FFFFFF;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .imagem__texto {
@@ -245,7 +281,9 @@ a {
 }
 
 .imagem__descricao {
-    font-size: 0.7rem;
+    font-size: 1rem;
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .menu-lateral {
@@ -333,17 +371,21 @@ a {
 
 .principal {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .rodape {
     background-color: #04244F;
     width: 100%;
+    height: 50px;
     padding: 1.5rem 3rem;
     box-sizing: border-box;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     color: #FFFFFF;
+    position: absolute;
+    bottom: 0;
 }
 
 .rodape__icones {
@@ -386,3 +428,104 @@ a {
     border: 2px solid #7B78E5;
     cursor: pointer;
 }
+
+.barra_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar2 {
+    background-color: #d9d9d9;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    width: 1440px;
+    box-sizing: content-box;
+  }
+
+  .navbar-brand2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navbar-brand2 img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .navbar-brand2 span{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+  }
+
+  .navbar-nav2 {
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+  }
+
+  .navbar-nav2 a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .navbar-nav2 img{
+    width: 30px;
+  }
+
+  .search-form {
+    display: flex;
+    align-items: center;
+  }
+
+  .search-form input[type="text"] {
+    padding: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 10px;
+    border-color: #097379;
+  }
+
+  .search-form button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .formulario{
+    margin-left: 100px;
+    margin-top: 130px;
+  }
+
+  #validation_errors{
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  * {
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+  }
+  *:before,
+  *:after {
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+  }

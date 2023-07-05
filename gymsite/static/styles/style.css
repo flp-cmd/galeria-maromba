@@ -165,7 +165,7 @@ input:focus{
     align-content: space-between;
 }
 
-.card {
+.card2 {
     border-radius: 10px;
     box-shadow: 0px 10px 10px #00000050;
     color: #FFFFFF;
@@ -187,14 +187,15 @@ input:focus{
     border-radius: 8px;
     border: 2px solid transparent;
     font-size: 1.2rem;
-    right: 0;
+    left: 190px;
     margin-right: 1.5rem;
     padding: .5rem .5rem;
     position: absolute;
     text-align: center;
-    top: 20px;
+    top: 15px;
     width: 100px;
     color: white;
+    box-sizing: border-box;
 }
 
 .card__info {
@@ -264,6 +265,7 @@ input:focus{
     justify-content: space-between;
     color: #FFFFFF;
     margin-top: 0.5rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .imagem__titulo {
@@ -271,6 +273,7 @@ input:focus{
     line-height: 2rem;
     color: #FFFFFF;
     font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .imagem__texto {
@@ -280,6 +283,7 @@ input:focus{
 .imagem__descricao {
     font-size: 1rem;
     padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .menu-lateral {
@@ -425,46 +429,61 @@ input:focus{
     cursor: pointer;
 }
 
-.navbar {
+.barra_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar2 {
     background-color: #d9d9d9;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 8px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
     margin-bottom: 20px;
+    margin-left: 0;
+    width: 1440px;
+    box-sizing: content-box;
   }
 
-  .navbar-brand {
+  .navbar-brand2 {
     display: flex;
     align-items: center;
     gap: 10px;
   }
 
-  .navbar-brand img {
-    width: 40px;
-    height: 40px;
+  .navbar-brand2 img {
+    width: 50px;
+    height: 50px;
   }
 
-  .navbar-brand span{
+  .navbar-brand2 span{
     color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
   }
 
-  .navbar-nav {
+  .navbar-nav2 {
     display: flex;
     gap: 30px;
     flex-direction: row;
   }
 
-  .navbar-nav a {
+  .navbar-nav2 a {
     display: flex;
     align-items: center;
     gap: 6px;
     color: #333;
     text-decoration: none;
+  }
+
+  .navbar-nav2 img{
+    width: 30px;
   }
 
   .search-form {
@@ -491,4 +510,22 @@ input:focus{
   .formulario{
     margin-left: 100px;
     margin-top: 130px;
+  }
+
+  #validation_errors{
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  * {
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+  }
+  *:before,
+  *:after {
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
   }

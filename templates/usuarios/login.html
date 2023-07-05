@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alura Space</title>
+    <title>Galeria Maromba</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -19,16 +19,16 @@
 <body>
     {% include 'galeria/partials/_messages.html' %}
     <div class="pagina-inicial">
-        <nav class="navbar">
-            <a class="navbar-brand" href="#">
+        <nav class="navbar2">
+            <a class="navbar-brand2" href="#">
               <img class="logo_imagem" src="{% static '/assets/logo/logo_maromba.png' %}" alt="Logo" />
               <span>GymSite</span>
             </a>
-            <ul class="navbar-nav">
+            <ul class="navbar-nav2">
               <li><a href="{% url 'index' %}"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}" alt="Home"> Home</a></li>
-              <li><a href="{% url 'login' %}"><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}" alt="Login"> Login</a></li>
-              <li><a href="{% url 'cadastro' %}"><img src="{% static '/assets/ícones/1x/Novas - inativo.png' %}" alt="Cadastro"> Cadastro</a></li>
-              <li><a href="{% url 'logout' %}"><img src="{% static '/assets/ícones/1x/Surpreenda-me - inativo.png' %}" alt="Logout"> Logout</a></li>
+              <li><a href="{% url 'login' %}"><img src="{% static '/assets/ícones/1x/login-icon.png' %}" alt="Login"> Login</a></li>
+              <li><a href="{% url 'cadastro' %}"><img src="{% static '/assets/ícones/1x/register-icon.png' %}" alt="Cadastro"> Cadastro</a></li>
+              <li><a href="{% url 'logout' %}"><img src="{% static '/assets/ícones/1x/logout-icon.png' %}" alt="Logout"> Logout</a></li>
             </ul>
             <form class="search-form" action="{% url 'buscar' %}">
               <input type="text" name="buscar" placeholder="O que você procura?">
@@ -50,7 +50,7 @@
                        {% endfor %}
                     </div>
                     <div class="col-12 text-center">
-                        <button class="btn btn-success col-12 mt-2" style="padding: top 5px;" type="submit">Logar</button>
+                        <button class="btn btn-success col-12 mt-2" style="width: 50px;" type="submit">Logar</button>
                     </div>
                 </form>
             </section>

@@ -83,6 +83,8 @@ class cadastroForms(forms.Form):
             padrao = r'\d'
             if re.search(padrao, nome):
                 raise forms.ValidationError('Números não são permitidos no campo nome')
+            if User.objects.filter(username=nome).exists():
+                raise forms.ValidationError("Nome já cadastrado")
             return nome
         
     def clean_senha_2(self):
