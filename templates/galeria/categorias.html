@@ -3,7 +3,7 @@
 {% block content %}
             <section class="conteudo">
                 <section class="banner">
-                    <img class="banner__imagem" src="{% static '/assets/imagens/banner_gym.jpg' %}" alt="banner academia">
+                    <img class="banner__imagem" src="{% static 'assets/imagens/banner_gym.jpg' %}" alt="banner academia">
                     <h1 class="banner__titulo"> A galeria mais completa de exercícios de academia!</h1>
                 </section>
                 <section class="tags">
@@ -23,10 +23,10 @@
                         <ul class="cards__lista">
                             {% if cards %}
                             {% for fotografia in cards %}
-                            <li class="card">
+                            <li class="card2">
                                 <a href="{% url 'imagem' fotografia.id %}">
                                     {% if fotografia.foto == '' or fotografia.foto == null %}
-                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/image-not-found.png' %}" alt="foto">
+                                    <img class="card__imagem" src="{% static 'assets/imagens/galeria/image-not-found.png' %}" alt="foto">
                                     {% else %}
                                     <img class="card__imagem" src="{{ fotografia.foto.url }}" alt="foto">
                                     {% endif %}

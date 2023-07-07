@@ -27,7 +27,7 @@ def buscar(request):
         if nome_buscado:
             fotografias_buscadas = fotografias.filter(nome__icontains=nome_buscado)
     
-    return render(request, 'galeria/buscar.html', {"cards": fotografias_buscadas})
+    return render(request, 'galeria/index.html', {"cards": fotografias_buscadas})
 
 
 def categorias(request, categoria):
