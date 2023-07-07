@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from galeria.models import Exercicios
+from apps.galeria.models import Exercicios
 from django.contrib import messages
 
 def index(request):

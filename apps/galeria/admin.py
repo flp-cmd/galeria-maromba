@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from galeria.models import Exercicios
+from apps.galeria.models import Exercicios
 
 class ListarExercicios(admin.ModelAdmin):
     list_display = ('id', 'nome', 'categoria', 'publicada')
