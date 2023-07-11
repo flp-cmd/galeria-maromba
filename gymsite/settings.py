@@ -32,7 +32,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = str(os.getenv('SECRET_KEY'))
+SECRET_KEY = 'django-insecure-ya229y4_(00)5k&x8((bux38qenjq-*k4-&jnu-rkle42$q&#3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -128,11 +128,11 @@ USE_TZ = True
 
 # AWS Settings
 
-AWS_ACCESS_KEY_ID = str(os.getenv('AWS_ACCESS_KEY_ID'))
+AWS_ACCESS_KEY_ID = 'AKIATAUA4GZIS24MWEX6'
 
-AWS_SECRET_ACCESS_KEY = str(os.getenv('AWS_SECRET_ACCESS_KEY'))
+AWS_SECRET_ACCESS_KEY = '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'
 
-AWS_STORAGE_BUCKET_NAME = str(os.getenv('AWS_STORAGE_BUCKET_NAME'))
+AWS_STORAGE_BUCKET_NAME = 'galeria-maromba'
 
 AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
